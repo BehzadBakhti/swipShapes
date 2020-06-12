@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1046599583322904}
+  m_IsPrefabAsset: 1
+--- !u!1 &1046599583322904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4500239535777350}
+  - component: {fileID: 114508598199694178}
+  - component: {fileID: 114598897425328502}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1582397329495688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4460706593090646}
+  - component: {fileID: 114529268249712150}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1609394108269244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4277095610920762}
+  - component: {fileID: 114550413335793392}
+  m_Layer: 0
+  m_Name: CatcherMgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4277095610920762
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609394108269244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4500239535777350}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4460706593090646
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1582397329495688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4500239535777350}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4500239535777350
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046599583322904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4277095610920762}
+  - {fileID: 4460706593090646}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114508598199694178
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046599583322904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6af98043ed4334c978289c340ec05b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  score: 0
+  coins: 0
+  coinText: {fileID: 0}
+  costToContinue: 20
+  lifes: 10
+  difficulty: 1
+  continueBtn: {fileID: 0}
+  lifesText: {fileID: 0}
+  jokker: {fileID: 0}
+  myTimeMgr: {fileID: 0}
+  contPanel: {fileID: 0}
+  coinsFly: {fileID: 0}
+  quitPanel: {fileID: 0}
+  shapeExist: 0
+  isGameOver: 0
+  isHintOn: 0
+  corners:
+  - {x: 7.5, y: 3.5, z: 0}
+  - {x: 7.5, y: -3.5, z: 0}
+  - {x: -7.5, y: 3.5, z: 0}
+  - {x: -7.5, y: -3.5, z: 0}
+  myModeChanger: {fileID: 0}
+  mySpawner: {fileID: 114529268249712150}
+  myCoinManager: {fileID: 0}
+  myCatcherManager: {fileID: 114550413335793392}
+  pointCounts: 4
+  coinsToSpawn: 3
+  gameMode: both
+  isDynamic: 1
+  wrongHit: 0
+--- !u!114 &114529268249712150
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1582397329495688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 702653258e8ba7840a56a31fcc714e55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSceneMgr: {fileID: 114508598199694178}
+  baseShapes:
+  - {fileID: 1808469827948036, guid: 474d492dc8c28d648a980ebc89b581c1, type: 2}
+  - {fileID: 1783251356928926, guid: b560e51fe9838b5418a81c71836499dd, type: 2}
+  - {fileID: 1000651286538804, guid: fe22eb2384203004ca431910f342b852, type: 2}
+  - {fileID: 1024009168755758, guid: 6c2ec8e12d9dbb0409ee43407cdea937, type: 2}
+  - {fileID: 1372752140398350, guid: b29b0af4343761547868cbe75f7f307d, type: 2}
+  - {fileID: 1362643925737476, guid: 55232d6f7b671ec4fbf0c10df735dbb8, type: 2}
+  - {fileID: 1724919287383522, guid: 8b0b05244df15304f935e747eb51d733, type: 2}
+  - {fileID: 1592330590528308, guid: 4e79c2ec72ed40b439e92b2e9461e6b9, type: 2}
+  activeShape: {fileID: 0}
+  baseColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.23137255, g: 0.2509804, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.8235294, b: 0.04402403, a: 1}
+  - {r: 1, g: 0.47058824, b: 0, a: 1}
+  - {r: 1, g: 1, b: 0, a: 1}
+  - {r: 0.627451, g: 0, b: 1, a: 1}
+--- !u!114 &114550413335793392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609394108269244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f141cef0ae368147bee396db3c124c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisSceneMgr: {fileID: 114508598199694178}
+  randColor: 0
+  randShape: 0
+  myCatchersScripts: []
+  myCatchers: []
+  myColors: []
+  catchers:
+  - {fileID: 1454809613297162, guid: ea62b811e55e0234fb5b9743adc3e3e1, type: 2}
+  - {fileID: 1186002996825956, guid: 2f288c0cc0ddf314b888ce06c56b5fe8, type: 2}
+  - {fileID: 1793389792303424, guid: 8cbb4c6aa84058e4ab96c4b6e79321ee, type: 2}
+  - {fileID: 1473355263929432, guid: 03bbb3c2f601399458fbc930983d4f4f, type: 2}
+  - {fileID: 1315450182650046, guid: da4d6a2884b78b94d8d8fc55672cd9f5, type: 2}
+  - {fileID: 1643309070694158, guid: 0d5bb9cf8bc1c89499ae64c8a11acded, type: 2}
+  - {fileID: 1743604419146988, guid: 00f0fd9a5a6bf6245ae18ad8aa858d74, type: 2}
+  - {fileID: 1431623336097172, guid: be00fa9aa4e9f954d8eb30da44961415, type: 2}
+  catcherColors:
+  - {r: 0, g: 0, b: 0, a: 1}
+  - {r: 0.23137255, g: 0.2509804, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.8235294, b: 0.043137256, a: 1}
+  - {r: 1, g: 0.47058824, b: 0, a: 1}
+  - {r: 1, g: 1, b: 0, a: 1}
+  - {r: 0.627451, g: 0, b: 1, a: 1}
+  isCatcherActive: 0
+--- !u!114 &114598897425328502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046599583322904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6525c088f5d436b48821f68d9f00d560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveCount: 0
+  modeChangePanel:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  sideSprites:
+  - {fileID: 21300000, guid: 9ca0d34030a598443835a7b1a82ce15d, type: 3}
+  - {fileID: 21300000, guid: 90f41493c9e54b047a7a44955ec9ef81, type: 3}
+  - {fileID: 21300000, guid: 94cef76b40669df44a220358a6c3706e, type: 3}
+  sideNote: {fileID: 0}
+  lastIndx: 0
+  isGameStarted: 0
